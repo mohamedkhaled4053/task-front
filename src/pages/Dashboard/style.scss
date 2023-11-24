@@ -1,0 +1,10 @@
+.dashboard {
+  display: flex;
+  .sidebar {
+    flex: 1;
+  }
+  .dashboard-page {
+    flex: 5;
+    min-height: 100vh;
+  }
+}
