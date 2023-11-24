@@ -1,0 +1,48 @@
+.navbar {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px 20px 50px;
+  box-shadow: 0 4px 23px 0 rgba(0, 0, 0, 0.05);
+  background-color: white;
+  .welcome {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 2rem;
+    .MuiInputBase-root {
+      border-radius: 50px;
+      input {
+        padding: 5px 10px;
+      }
+    }
+    .icon {
+      position: relative;
+      color: #3A8A9A;
+      .number {
+        position: absolute;
+        width: 15px;
+        border-radius: 50%;
+        background: var(--main-color);
+        height: 15px;
+        display: flex;
+        font-size: 10px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+        top: 0;
+        right: 0;
+      }
+    }
+    .account-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+}
