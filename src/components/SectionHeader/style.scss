@@ -1,0 +1,17 @@
+.section-header {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  .left {
+    .description {
+      color: var(--faded-color);
+      margin-top: 5px;
+    }
+  }
+  .right {
+    .all{
+        color: var(--main-color);
+        font-weight: bold;
+    }
+  }
+}

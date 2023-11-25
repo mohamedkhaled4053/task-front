@@ -1,0 +1,30 @@
+.announcement {
+  display: flex;
+  margin-bottom: 20px;
+  color: var(--faded-color);
+
+  .announcer {
+    display: flex;
+    gap: 10px;
+    min-width: 35%;
+
+    .announcer-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    .announcer-name {
+      white-space: nowrap;
+      color: black;
+    }
+
+  }
+  .line {
+    width: 1px;
+    background-color: var(--faded-color);
+    margin: 0 20px;
+  }
+  .announcement-content {
+    font-size: 0.9rem;
+  }
+}

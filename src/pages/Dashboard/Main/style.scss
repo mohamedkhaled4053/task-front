@@ -22,6 +22,8 @@
         }
         .quote {
           margin: 20px 0 10px;
+          color: var(--faded-color);
+          font-style: italic;
         }
         .view-tips {
           padding: 10px 25px;
@@ -35,6 +37,29 @@
         img {
           height: 100%;
         }
+      }
+    }
+
+    .body {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      .announcements,
+      .exams {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 3px 3px 14px 0 hsla(0, 0%, 75%, 0.3);
+      }
+
+      .announcements {
+        flex: 2;
+        .announcements-list{
+          padding: 0 30px;
+        }
+        
+      }
+      .exams {
+        flex: 1;
       }
     }
   }
