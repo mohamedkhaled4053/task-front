@@ -4,6 +4,8 @@ import headerImg from "../../../assets/desktop.svg";
 import "./style.scss";
 import { SectionHeader } from "../../../components/SectionHeader/SectionHeader";
 import { Announcement } from "../../../components/Announcement/Announcement";
+import { Exam } from "../../../components/Exam/Exam";
+import { IExam } from "../../../types/types";
 
 export const Main = () => {
   let announcements = [
@@ -43,24 +45,24 @@ export const Main = () => {
         "Helloooo, Can't wait our upcoming trip on the next weekend, The trip will be to Dreampark and Pyramids :D to book your seat please contact your class teacher.",
     },
   ];
-  // let exams = [
-  //   {
-  //     _id: "655d167466efac37bdaed7f2",
-  //     title: "Unit 2 quiz",
-  //     course: { _id: "655d0e7f66efac37bdaed7eb", title: "Physics 02" },
-  //     topic: "unit 2 motion and forces",
-  //     dueTo: "2023-12-31T00:00:00.000Z",
-  //     type: "quiz",
-  //   },
-  //   {
-  //     _id: "655d167466efac37bdaed7f3",
-  //     title: "12-12 Assignment",
-  //     course: { _id: "655d0e7f66efac37bdaed7ec", title: "Arabic 12" },
-  //     topic: "الوحدة الثانية - الأفعال",
-  //     dueTo: "2023-11-30T00:00:00.000Z",
-  //     type: "assignment",
-  //   },
-  // ];
+  let exams:IExam[] = [
+    {
+      _id: "655d167466efac37bdaed7f2",
+      title: "Unit 2 quiz",
+      course: { _id: "655d0e7f66efac37bdaed7eb", title: "Physics 02" },
+      topic: "unit 2 motion and forces",
+      dueTo: "2023-12-31T00:00:00.000Z",
+      type: "quiz",
+    },
+    {
+      _id: "655d167466efac37bdaed7f3",
+      title: "12-12 Assignment",
+      course: { _id: "655d0e7f66efac37bdaed7ec", title: "Arabic 12" },
+      topic: "الوحدة الثانية - الأفعال",
+      dueTo: "2023-11-30T00:00:00.000Z",
+      type: "assignment",
+    },
+  ];
   return (
     <div className="main">
       <Navbar />
@@ -98,6 +100,11 @@ export const Main = () => {
               title="What's due"
               description='Sometimes "LATER" becomes "NEVER", Go Now'
             />
+            <div className="exams-list">
+              {exams.map((exam) => (
+                <Exam key={exam._id} {...exam} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
