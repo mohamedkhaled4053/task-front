@@ -3,6 +3,11 @@
   margin-bottom: 20px;
   color: var(--faded-color);
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 5px;
+  }
+
   .announcer {
     display: flex;
     gap: 10px;
@@ -17,7 +22,6 @@
       white-space: nowrap;
       color: black;
     }
-
   }
   .line {
     width: 1px;

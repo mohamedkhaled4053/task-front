@@ -8,6 +8,7 @@ import {
 import { BsGraphUpArrow, BsMegaphone } from "react-icons/bs";
 import "./style.scss";
 import { NavLink } from "react-router-dom";
+import { MdMenu } from "react-icons/md";
 
 export const Sidebar = () => {
   let links = [
@@ -33,6 +34,7 @@ export const Sidebar = () => {
           </NavLink>
         ))}
       </div>
+      <MdMenu className="menu-bar"/>
     </aside>
   );
 };

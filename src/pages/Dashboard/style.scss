@@ -5,7 +5,9 @@
   }
   .dashboard-page {
     flex: 5;
-    min-height: 100vh;
     background-color: #f5f4f9;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 }

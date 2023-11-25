@@ -28,8 +28,27 @@
       &:hover,
       &.active {
         background-color: white;
-        color: #3A8A9A;
+        color: #3a8a9a;
       }
+    }
+  }
+  .menu-bar {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    .title {
+      margin-bottom: 0;
+    }
+    .links {
+      display: none;
+    }
+    .menu-bar {
+      display: unset;
+      font-size: 2rem;
     }
   }
 }

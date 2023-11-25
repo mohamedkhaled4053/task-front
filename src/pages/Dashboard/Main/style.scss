@@ -5,7 +5,6 @@
       display: flex;
       background: white;
       border-radius: 10px;
-      overflow: hidden;
       align-items: center;
       height: 280px;
       box-shadow: 3px 3px 14px 0 hsla(0, 0%, 75%, 0.3);
@@ -13,12 +12,15 @@
         flex: 1.5;
         padding: 30px;
         h2 {
-          font-size: 72px;
+          font-size: 4.5rem;
           background: linear-gradient(90deg, #14557b, #72dbff);
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           text-transform: uppercase;
+          @media (max-width: 576px) {
+            font-size: 2rem;
+          }
         }
         .quote {
           margin: 20px 0 10px;
@@ -30,12 +32,16 @@
           border-radius: 5px;
           font-size: 1.1rem;
           background-color: var(--main-color);
+          color: white;
         }
       }
       .header-img {
         height: 100%;
         img {
           height: 100%;
+        }
+        @media (max-width: 1040px) {
+          display: none;
         }
       }
     }
@@ -44,6 +50,9 @@
       margin-top: 20px;
       display: flex;
       gap: 20px;
+      @media (max-width: 992px) {
+        flex-direction: column;
+      }
       .announcements,
       .exams {
         background: white;
@@ -53,10 +62,9 @@
 
       .announcements {
         flex: 2;
-        .announcements-list{
+        .announcements-list {
           padding: 0 30px;
         }
-        
       }
       .exams {
         flex: 1;
