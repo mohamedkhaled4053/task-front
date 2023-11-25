@@ -1,0 +1,41 @@
+.main {
+  .content {
+    padding: 15px;
+    .header {
+      display: flex;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      align-items: center;
+      height: 280px;
+      box-shadow: 3px 3px 14px 0 hsla(0, 0%, 75%, 0.3);
+      .text {
+        flex: 1.5;
+        padding: 30px;
+        h2 {
+          font-size: 72px;
+          background: linear-gradient(90deg, #14557b, #72dbff);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-transform: uppercase;
+        }
+        .quote {
+          margin: 20px 0 10px;
+        }
+        .view-tips {
+          padding: 10px 25px;
+          border-radius: 5px;
+          font-size: 1.1rem;
+          background-color: var(--main-color);
+        }
+      }
+      .header-img {
+        height: 100%;
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
