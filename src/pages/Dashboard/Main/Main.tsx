@@ -7,6 +7,7 @@ import { Announcement } from "../../../components/Announcement/Announcement";
 import { Exam } from "../../../components/Exam/Exam";
 import { useAppDispatch, useAppSelector } from "../../../hooks/hooks";
 import { getAnnouncements, getExams } from "../../../features/dataSlice";
+import { useTranslation } from "react-i18next";
 
 export const Main = () => {
   let { announcements, announcementsLoading, exams, examsLoading } =
@@ -20,21 +21,18 @@ export const Main = () => {
     //eslint-disable-next-line
   }, []);
 
+  let { t } = useTranslation();
+
   return (
     <div className="main">
       <Navbar />
       <div className="content">
         <div className="header">
           <div className="text">
-            <h2>exams time</h2>
-            <p>
-              Here we are, Are ready to fight? Don't worry, we prepared some
-              tips to be ready for your exams.
-            </p>
-            <p className="quote">
-              "nothing happens until something moves" - Albert Einstein
-            </p>
-            <button className="view-tips">View exams tips</button>
+            <h2>{t("header.title")}</h2>
+            <p>{t("header.description")}</p>
+            <p className="quote">{t("header.quote")} </p>
+            <button className="view-tips">{t("header.button")}</button>
           </div>
           <div className="header-img">
             <img src={headerImg} alt="header" />
