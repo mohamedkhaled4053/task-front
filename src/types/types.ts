@@ -1,7 +1,8 @@
 export interface IUser {
   name: string;
   userName: string;
-  password: string;
+  image: string;
+  token: string;
 }
 
 export interface IAnnouncement {

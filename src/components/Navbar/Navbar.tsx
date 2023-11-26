@@ -3,11 +3,13 @@ import "./style.scss";
 import { InputAdornment, TextField } from "@mui/material";
 import { FaSearch } from "react-icons/fa";
 import { IoIosMail, IoMdNotifications } from "react-icons/io";
+import { useAppSelector } from "../../hooks/hooks";
 
 export const Navbar = () => {
+  let { user } = useAppSelector((state) => state.user);
   return (
     <div className="navbar">
-      <div className="welcome">Welcome Talia,</div>
+      <div className="welcome">Welcome {user?.name},</div>
       <div className="left">
         <TextField
           type="search"
