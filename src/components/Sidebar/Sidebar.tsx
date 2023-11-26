@@ -26,6 +26,7 @@ export const Sidebar = () => {
       <div className="links">
         {links.map(({ value, icon }) => (
           <NavLink
+            key={value}
             className={({ isActive }) => (isActive ? "active" : "")}
             to={value === "dashboard" ? "" : value}
           >
@@ -34,7 +35,7 @@ export const Sidebar = () => {
           </NavLink>
         ))}
       </div>
-      <MdMenu className="menu-bar"/>
+      <MdMenu className="menu-bar" />
     </aside>
   );
 };

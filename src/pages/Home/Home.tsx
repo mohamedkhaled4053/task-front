@@ -1,7 +1,24 @@
 import React from "react";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import { logout, userLogin } from "../../features/userSlice";
+import "./style.scss";
 
-type Props = {};
+export const Home = () => {
+  let { loading, user } = useAppSelector((state) => state.user);
+  let dispatch = useAppDispatch();
 
-export const Home = (props: Props) => {
-  return <div>Home</div>;
+  function handleClick() {
+    if (user) return dispatch(logout());
+    let mockUser = { userName: "test@test.com", password: "aaaaa" };
+    dispatch(userLogin(mockUser));
+  }
+
+  return (
+    <div className="page-placeholder home">
+      <h1 className="gradiant-text">home</h1>
+      <button onClick={handleClick}>
+        {loading ? "loading" : user ? "logout" : "login"}
+      </button>
+    </div>
+  );
 };
