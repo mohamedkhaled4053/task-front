@@ -1,9 +1,8 @@
 import React from "react";
 
-type Props = {};
 
-export const Schedule = (props: Props) => {
-  return <div>Schedule</div>;
+export const Schedule = () => {
+  return <div className="page-placeholder gradiant-text">Schedule</div>;
 };
 
 export default Schedule;

@@ -14,3 +14,19 @@
 body {
   font-family: "Roboto";
 }
+
+.page-placeholder{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 4.5rem;
+  background: linear-gradient(90deg, #14557b, #72dbff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  @media (max-width: 576px) {
+    font-size: 2rem;
+  }
+}

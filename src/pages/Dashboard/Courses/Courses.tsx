@@ -1,9 +1,8 @@
 import React from 'react'
 
-type Props = {}
 
-export const Courses = (props: Props) => {
+export const Courses = () => {
   return (
-    <div>Courses</div>
+    <div className='page-placeholder gradiant-text'>Courses</div>
   )
 }

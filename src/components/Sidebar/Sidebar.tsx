@@ -17,7 +17,7 @@ export const Sidebar = () => {
     { value: "courses", icon: <FaBook /> },
     { value: "gradebook", icon: <FaGraduationCap /> },
     { value: "performance", icon: <BsGraphUpArrow /> },
-    { value: "announcement", icon: <BsMegaphone /> },
+    { value: "announcements", icon: <BsMegaphone /> },
   ];
 
   return (
