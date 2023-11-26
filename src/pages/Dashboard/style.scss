@@ -6,6 +6,7 @@
   .dashboard-page {
     flex: 5;
     background-color: #f5f4f9;
+    min-height: 100vh;
   }
   @media (max-width: 768px) {
     flex-direction: column;
