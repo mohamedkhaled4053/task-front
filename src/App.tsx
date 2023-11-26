@@ -10,12 +10,20 @@ import { Error } from "./pages/Error/Error";
 import { Gradebook } from "./pages/Dashboard/Gradebook/Gradebook";
 import { Performance } from "./pages/Dashboard/Performance/Performance";
 import { Announcements } from "./pages/Dashboard/Announcements/Announcements";
+import { RequireAuth } from "./components/RequireAuth/RequireAuth";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Dashboard />}>
+        <Route
+          path="/"
+          element={
+            <RequireAuth>
+              <Dashboard />
+            </RequireAuth>
+          }
+        >
           <Route index element={<Main />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/courses" element={<Courses />} />
